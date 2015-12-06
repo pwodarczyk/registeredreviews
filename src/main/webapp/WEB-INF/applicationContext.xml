@@ -32,7 +32,7 @@
     
 <!--     <import resource="spring/iBatisContext.xml" /> -->
 <!-- 	<import resource="spring/mailContext.xml" /> -->
-<!--     <import resource="spring/daoContext.xml" /> -->
+    <import resource="spring/dao-context.xml" />
 <!--     <import resource="spring/google-maps.xml" /> -->
 <!-- 	<import resource="spring/ecommerce.xml" /> -->
     <import resource="spring/error-handler.xml" />

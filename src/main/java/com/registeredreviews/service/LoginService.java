@@ -1,6 +1,6 @@
 package com.registeredreviews.service;
 
-public class LoginManager {
+public class LoginService {
 
 	
 	public static String verifyAccount(String password, String userName){

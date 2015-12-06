@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.registeredreviews.mobile.Constants;
-import com.registeredreviews.service.LoginManager;
+import com.registeredreviews.service.LoginService;
 import com.registeredreviews.util.StringUtils;
 
 @Controller
@@ -37,7 +37,7 @@ public class LoginController {
 		if(!StringUtils.isNullOrEmpty(password)&&!StringUtils.isNullOrEmpty(userName)){
 
 			
-			String token = LoginManager.verifyAccount(userName,password);
+			String token = LoginService.verifyAccount(userName,password);
 			if(token==null){
 				ModelAndView modelAndView = new  ModelAndView("login");
 				modelAndView.addObject("error",Constants.ERROR_LOGIN);
