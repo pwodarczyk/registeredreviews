@@ -1,6 +1,0 @@
-<project name="registeredreviews" default="package" basedir=".">
-
-	<property name="build.finalName" value="registeredreviews_com"/>
-	<import file="./app_config/build/common-build.xml"/>
-	
-</project>
