@@ -6,8 +6,10 @@
 	<c:param name="meta_keywords" value="reviews, registered"/>
 </c:import>
 
-<body>
+
+<div>
     <p>Search:</p><input type ="text" name="search"/>
-</body>
+</div>
+
 
 <c:import url="/WEB-INF/views/includes/footer.jsp"/>

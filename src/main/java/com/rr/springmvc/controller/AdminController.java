@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class AdminController {
 	
 	
-	@RequestMapping(value = "/admin/login", method = RequestMethod.GET)
+	@RequestMapping(value = "/admin", method = RequestMethod.GET)
 	public String homeWithoutExtension(Locale locale, Model model) {		
 		
 		Date date = new Date();
@@ -26,7 +26,7 @@ public class AdminController {
 		
 		model.addAttribute("isHomePage", true);
 		
-		return "admin/login";
+		return "login";
 	}
 	
 	

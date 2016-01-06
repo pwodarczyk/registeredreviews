@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class HomeController {
 	
 	
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = {"/", "/home"}, method = RequestMethod.GET)
 	public String homeWithoutExtension(Locale locale, Model model) {		
 		
 		Date date = new Date();

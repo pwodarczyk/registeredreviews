@@ -17,8 +17,16 @@ google_api_id varchar(100),
 phone varchar(25), 
 website varchar(255), 
 email varchar (255), 
-created_date date, 
+created_date datetime, 
 primary key (id)) 
+ENGINE=INNODB;
+
+drop table if exists registered_reviews.user_roles;
+CREATE TABLE user_roles (
+  user_role_id int(11) auto_increment NOT NULL ,
+  user_id int(11) NOT NULL,
+  role varchar(45) NOT NULL,
+  PRIMARY KEY (user_role_id))
 ENGINE=INNODB;
 
 drop table if exists registered_reviews.site_user;
@@ -35,6 +43,7 @@ email varchar (255) not null,
 password varchar (100) not null,
 verified boolean not null default false,
 created_date date, 
+enabled TINYINT NOT NULL DEFAULT 1 ,
 primary key (id)) 
 ENGINE=INNODB;
 
@@ -72,3 +81,10 @@ trusted_user boolean not null default false,
 created_date date, 
 primary key (id)) 
 ENGINE=INNODB;
+
+
+INSERT INTO site_user(first_name,last_name,email,password,enabled,created_date)
+VALUES ('phil','wodarczyk','philwod@gmail.com','phil', true, now());
+
+INSERT INTO user_roles (user_id, role)
+VALUES ('6', 'ROLE_USER');
