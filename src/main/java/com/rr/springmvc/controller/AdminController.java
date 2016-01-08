@@ -26,7 +26,7 @@ public class AdminController {
 		
 		model.addAttribute("isHomePage", true);
 		
-		return "login";
+		return "admin/index";
 	}
 	
 	

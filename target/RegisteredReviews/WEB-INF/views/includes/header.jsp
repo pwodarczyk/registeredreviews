@@ -14,7 +14,7 @@
 <body>
 <div class="logo">
 	<a href="/">
-	<img alt="registered reviews logo" src="/static/images/registered-reviews-logo.png">
+	<img alt="registered reviews logo" src="<c:url value='/static/images/registered-reviews-logo.png' />">
 	</a>
 </div>
 <div class="login">
