@@ -12,4 +12,5 @@ public class Constants {
 	
 
 	public static final String ERROR_LOGIN = "There was an error with your credentials.";
+	
 }

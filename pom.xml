@@ -150,6 +150,12 @@
 			<version>${dbunit.version}</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- Google places api -->
+	    <dependency>
+	        <groupId>se.walkercrou</groupId>
+	        <artifactId>google-places-api-java</artifactId>
+	        <version>2.1.2</version>
+	    </dependency>
 		
 	</dependencies>
 

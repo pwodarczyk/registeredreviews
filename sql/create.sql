@@ -32,7 +32,7 @@ ENGINE=INNODB;
 drop table if exists registered_reviews.site_user;
 create table registered_reviews.site_user 
 (id int auto_increment,
-first_name varchar(20) not null,
+first_name varchar(20),
 last_name varchar(40),
 address varchar(80),
 city varchar(50),
