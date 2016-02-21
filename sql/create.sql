@@ -47,6 +47,18 @@ enabled TINYINT NOT NULL DEFAULT 1 ,
 primary key (id)) 
 ENGINE=INNODB;
 
+drop table if exists registered_reviews.quote_request;
+create table registered_reviews.quote_request 
+(id int auto_increment,
+name varchar(100),
+email varchar(255),
+message varchar(2000),
+business_id varchar(100),
+service_requested varchar(100),
+created_date date,
+primary key (id)) 
+ENGINE=INNODB;
+
 drop table if exists registered_reviews.promotion;
 create table registered_reviews.promotion 
 (id int auto_increment,

@@ -167,7 +167,7 @@
 					<artifactId>maven-war-plugin</artifactId>
 					<version>2.6</version>
 					<configuration>
-          				<webappDirectory>/Development/GIT/registeredreviews/target/RegisteredReviews</webappDirectory>
+          				<webappDirectory>/Development/GIT/registeredreviews/target/registeredreviews</webappDirectory>
 <!-- 						<warSourceDirectory>src/main/webapp/target</warSourceDirectory> -->
 <!-- 						<warName>RegisteredReviews</warName> -->
 <!-- 						<failOnMissingWebXml>false</failOnMissingWebXml> -->

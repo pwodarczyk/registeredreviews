@@ -23,18 +23,6 @@ public class User {
 	@Column(name = "email",nullable=false)
 	private String email;
 	
-	public boolean isVerified() {
-		return verified;
-	}
-	public void setVerified(boolean verified) {
-		this.verified = verified;
-	}
-	public boolean isEnabled() {
-		return enabled;
-	}
-	public void setEnabled(boolean enabled) {
-		this.enabled = enabled;
-	}
 	@Size(min=0, max=100)
 	@Column(name = "password", nullable = false)
 	private String password;
@@ -52,8 +40,6 @@ public class User {
 
 	@Column(name = "enabled",nullable=false)
 	private boolean enabled = true;
-	
-	
 	
 	public Long getId() {
 		return id;
@@ -86,5 +72,16 @@ public class User {
 		this.password = password;
 	}
 
-
+	public boolean isVerified() {
+		return verified;
+	}
+	public void setVerified(boolean verified) {
+		this.verified = verified;
+	}
+	public boolean isEnabled() {
+		return enabled;
+	}
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
+	}
 }
