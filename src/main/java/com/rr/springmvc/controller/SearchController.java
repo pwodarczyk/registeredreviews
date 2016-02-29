@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import se.walkercrou.places.GooglePlaces;
+import se.walkercrou.places.Param;
 
 @Controller
 public class SearchController {
@@ -35,17 +36,24 @@ public class SearchController {
 		return "search/index";
 	}
 	@RequestMapping(value = "/search", method = RequestMethod.POST)
-	public ModelAndView searchResults(Locale locale, Model model,@RequestParam(value="target") String target, @RequestParam(value="q") String q) {		
+	public ModelAndView searchResults(Locale locale, Model model,@RequestParam(value="target") String target, @RequestParam(value="q") String q,  @RequestParam(value="postal", required=false) String postalCode,  @RequestParam(value="lat", required=false) String lat,  @RequestParam(value="lng",required=false) String lng) {		
 		if(target == "business"){
 
+			
 			ModelAndView modelAndView = new  ModelAndView("search/results");
 			
 			String apiKey  = environment.getRequiredProperty("google.api.key");
 			GooglePlaces client = new GooglePlaces(apiKey);
 			
 			//TODO implement google places search
+
+			Param latParam =new Param("lat");
+			latParam.value(lat);
+			Param lngParam =new Param("lng");
+			lngParam.value(lng);
 			
-			
+			int numberResults = 100;
+			client.getPlacesByQuery(q,numberResults,lngParam,latParam); 
 			
 			//TODO cross reference our reviews
 			

@@ -21,11 +21,11 @@
 		<form:input path="businessId" id="businessId" type="hidden" />
 
 		<label for="name">Name: </label>
-		<form:input path="name" id="name" />
+		<form:input path="name" required="required" id="name" />
 		<form:errors path="name" cssClass="error" />
 		
 		<label for="email">Email: </label>
-		<form:input type="email" path="email" id="email" />
+		<form:input type="email" required="required" path="email" id="email" />
 		<form:errors path="email" cssClass="error" />
 		
 		<label for="serviceRequested">Service Requested: </label>
@@ -33,7 +33,7 @@
 		<form:errors path="serviceRequested" cssClass="error" />
 		
 		<label for="message">Message: </label>
-		<form:input path="message" id="message" />
+		<form:input path="message" required="required" id="message" />
 		<form:errors path="message" cssClass="error" />
 		
 		<input type="submit" value="Send Request" />
